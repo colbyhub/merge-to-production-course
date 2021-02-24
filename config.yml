@@ -1,0 +1,16 @@
+title: merge-to-production
+description: Easily practice merging to production
+template:
+  repo: merge-to-production-template
+  name: merge-to-production
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
